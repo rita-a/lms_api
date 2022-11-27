@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "4392682e-46c6-43e9-aed6-d630fecc8b0c",
+		"name": "CI Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21853483"
+	},
+	"item": [
+		{
+			"name": "QA Get tags Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log('QA Get tags');\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rq\": {\r\n    \"builds\": [\r\n      0\r\n    ],\r\n    \"statuses\": [\r\n      0\r\n    ],\r\n    \"createdBy\": [\r\n      \"string\"\r\n    ],\r\n    \"modules\": [\r\n      \"string\"\r\n    ],\r\n    \"functionalTasks\": [\r\n      \"string\"\r\n    ],\r\n    \"flags\": [\r\n      \"string\"\r\n    ],\r\n    \"createdAtFrom\": \"2022-07-14T01:16:08.519Z\",\r\n    \"createdAtTo\": \"2022-07-14T01:16:08.519Z\",\r\n    \"updatedAtFrom\": \"2022-07-14T01:16:08.519Z\",\r\n    \"updatedAtTo\": \"2022-07-14T01:16:08.519Z\",\r\n    \"text\": \"string\",\r\n    \"filterTextLocale\": \"string\",\r\n    \"filterTextCaseSensitive\": true,\r\n    \"filterTextFullTextSearch\": true,\r\n    \"filterTextFullWordSearch\": true,\r\n    \"dueDateFrom\": \"2022-07-14T01:16:08.519Z\",\r\n    \"dueDateTo\": \"2022-07-14T01:16:08.519Z\",\r\n    \"tagName\": \"string\",\r\n    \"context\": \"string\",\r\n    \"amendBatchTask\": \"string\",\r\n    \"tagsWithChangeRequestsOnly\": true,\r\n    \"tagsWithChangeRequestsByCurrentUserOnly\": true\r\n  },\r\n  \"page\": {\r\n    \"pageNumber\": 0,\r\n    \"pageSize\": 3,\r\n    \"paged\": true,\r\n    \"unpaged\": false,\r\n    \"offset\": 0,\r\n    \"sort\": {\r\n      \"sorted\": true,\r\n      \"unsorted\": true,\r\n      \"empty\": true\r\n    }\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tools1-qa.pyrsoftware.ca:5556/starslms/lms/api/tags/get",
+					"protocol": "https",
+					"host": [
+						"tools1-qa",
+						"pyrsoftware",
+						"ca"
+					],
+					"port": "5556",
+					"path": [
+						"starslms",
+						"lms",
+						"api",
+						"tags",
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
