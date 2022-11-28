@@ -54,6 +54,43 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "/api/git/last-commit-data Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tools1-qa.pyrsoftware.ca:5556/starslms/lms/api/git/last-commit-data",
+					"protocol": "https",
+					"host": [
+						"tools1-qa",
+						"pyrsoftware",
+						"ca"
+					],
+					"port": "5556",
+					"path": [
+						"starslms",
+						"lms",
+						"api",
+						"git",
+						"last-commit-data"
+					]
+				},
+				"description": "Provides latest commit data stored in LMS."
+			},
+			"response": []
 		}
 	]
 }
